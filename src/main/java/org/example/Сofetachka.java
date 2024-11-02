@@ -3,13 +3,13 @@ package org.example;
 import java.util.Scanner;
 
 class Cofetachka {
-    public static int coffe;
+    public static int nowCoffe;
     public static int maxCoffe = 150;
-    public static int milk;
+    public static int nowMilk;
     public static int maxMilk = 2500;
-    public static int water;
+    public static int nowWater;
     public static int maxWater = 3000;
-    public static int pollution;
+    public static int nowPollution;
     public static int maxPollution = 150;
 
     public static void cofetachka() {
@@ -26,13 +26,20 @@ class Cofetachka {
                 System.out.println("6.?");
                 System.out.println("0.Выключить");
                 System.out.println("-------------------------------");
-                switch (men){
-                    case 1:
-                        if (coffe > 120)  {
 
-                        }
-                }
             }
 
     }
 }
+    /*public static void rascapuchino() {
+        System.out.println("Состав капучино");
+        System.out.println("вода:" + Capuchino.waterRashod);
+        System.out.println("молоко:" + Capuchino.milkRashod);
+        System.out.println("Зерно:" + Capuchino.coffeeRashod);
+    }
+    public static void rasespersso(){
+        System.out.println("Состав эспрессо");
+        System.out.println("вода:" + expreso.waterRashod);
+        System.out.println("молоко:" + expreso.milkRashod);
+        System.out.println("Зерно:" + expreso.coffeeRashod);
+    }*/

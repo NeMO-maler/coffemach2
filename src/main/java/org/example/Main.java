@@ -1,7 +1,7 @@
 package org.example;
 
 import java.util.Scanner;
-import static org.example.rashod.main;
+import static org.example.MainMenu.main;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -11,6 +11,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Нажмите Enter, чтобы включить кофемашину:");
         scanner.nextLine();
+        MainMenu.main();
 
 
 
