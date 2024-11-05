@@ -14,17 +14,17 @@ public class MainMenu {
 
     public static void main() {
         System.out.println("ГЛАВНОЕ МЕНЮ");
-        byte van = -1;
-        while (van < 0 || van > 4) {
+       // byte van = -1;
+      //  while (van < 0 || van > 4) {
         System.out.println("________________________________");
         System.out.println("1.Приготовить кофе");
         System.out.println("2.Показатели ингридиентов и ззагрязнения");
         System.out.println("3.Выключить кофемашниу");
-        System.out.println("4Посмотреть логи");
+        System.out.println("4.Посмотреть логи");
         System.out.println("________________________________");
         Scanner scanner = new Scanner(System.in);
 
-            try {
+         /*   try {
                 String input = scanner.nextLine();
 
                 if (van < 0 || van > 3) {
@@ -34,8 +34,8 @@ public class MainMenu {
             } catch (NumberFormatException e) {
                 Logi.log("Ошибка ввода.");
                 System.out.println("Введите корректное значение от 0 до 6.");
-            }
-
+            }*/
+        int van = scanner.nextByte();
         switch (van){
             case 1: if (Coffe < 4){
                 System.out.println("______________________________________________");
@@ -75,7 +75,6 @@ public class MainMenu {
         }}
     }
 
-    }
 
 
 
