@@ -20,7 +20,7 @@ public class MainMenu {
         System.out.println("1.Приготовить кофе");
         System.out.println("2.Показатели ингридиентов и ззагрязнения");
         System.out.println("3.Выключить кофемашниу");
-        System.out.println("Посмотреть логи");
+        System.out.println("4Посмотреть логи");
         System.out.println("________________________________");
         Scanner scanner = new Scanner(System.in);
 
@@ -37,10 +37,37 @@ public class MainMenu {
             }
 
         switch (van){
-            case 1: Prepare.prepare();
-                    main();
+            case 1: if (Coffe < 4){
+                System.out.println("______________________________________________");
+                System.out.println("Недостаточно кофейных зерен. Пополните запас.");
+                System.out.println("----------------------------------------------");
+                REFRESH.Refresh();
+            };
+                if (milk< 200){
+                    System.out.println("______________________________________________");
+                    System.out.println("Недостаточно молока. Пополните запас.");
+                    System.out.println("----------------------------------------------");
+                    REFRESH.Refresh();
+                };
+                if(water < 140) {
+                    System.out.println("______________________________________________");
+                    System.out.println("Недостаточно воды. Пополните запас.");
+                    System.out.println("----------------------------------------------");
+                    REFRESH.Refresh();
+                };
+                if (polution >= 10){
+                    System.out.println("______________________________________________");
+                    System.out.println("Кофемашина загрязнена. Необходима очистка");
+                    System.out.println("----------------------------------------------");
+                    REFRESH.Refresh();
+                } else {
+                    Logi.log("Приготовление напитка");
+                    Prepare.prepare();
+                }
+
             case 2:
                 REFRESH.Refresh();
+                break;
             case 3:
                 Logi.log("Машина выключена");
                 System.out.println("Выключение кофемашины");
