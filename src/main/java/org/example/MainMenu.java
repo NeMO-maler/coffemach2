@@ -13,35 +13,34 @@ public class MainMenu {
     public static int maxPolutiom = 20;
 
     public static void main() {
+        Scanner scan = new Scanner(System.in);
         System.out.println("ГЛАВНОЕ МЕНЮ");
-       // byte van = -1;
-      //  while (van < 0 || van > 4) {
-        System.out.println("________________________________");
-        System.out.println("1.Приготовить кофе");
-        System.out.println("2.Показатели ингридиентов и ззагрязнения");
-        System.out.println("3.Выключить кофемашниу");
-        System.out.println("4.Посмотреть логи");
-        System.out.println("________________________________");
-        Scanner scanner = new Scanner(System.in);
 
-         /*   try {
-                String input = scanner.nextLine();
+        byte van = -1;
+            while (van < 0 || van > 4) {
+            System.out.println("________________________________");
+            System.out.println("1.Приготовить кофе");
+            System.out.println("2.Показатели ингридиентов и ззагрязнения");
+            System.out.println("3.Выключить кофемашниу");
+            System.out.println("4.Посмотреть логи");
+            System.out.println("________________________________");
 
-                if (van < 0 || van > 3) {
-                    Logi.log("Ошибка ввода.");
-                    System.out.println("Введите значение от 0 до 6.");
+            try {
+                String input = scan.nextLine();
+                van =Byte.parseByte(input);
+                if (van < 0 || van > 4){
+                    System.out.println("Ошибка ввода. Введите значение от 1 до последнего(4)");
                 }
             } catch (NumberFormatException e) {
-                Logi.log("Ошибка ввода.");
-                System.out.println("Введите корректное значение от 0 до 6.");
-            }*/
-        int van = scanner.nextByte();
-        switch (van){
-            case 1: if (Coffe < 4){
-                System.out.println("______________________________________________");
-                System.out.println("Недостаточно кофейных зерен. Пополните запас.");
-                System.out.println("----------------------------------------------");
-                REFRESH.Refresh();
+                System.out.println("Введите корректное значение");
+            }
+
+            switch (van){
+                case 1: if (Coffe < 4){
+                    System.out.println("______________________________________________");
+                    System.out.println("Недостаточно кофейных зерен. Пополните запас.");
+                    System.out.println("----------------------------------------------");
+                    REFRESH.Refresh();
             };
                 if (milk< 200){
                     System.out.println("______________________________________________");
@@ -72,7 +71,9 @@ public class MainMenu {
                 Logi.log("Машина выключена");
                 System.out.println("Выключение кофемашины");
                 System.exit(0);
-        }}
+        }
+        }
+    }
     }
 
 
