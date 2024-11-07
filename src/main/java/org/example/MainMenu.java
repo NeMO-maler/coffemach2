@@ -17,19 +17,21 @@ public class MainMenu {
         System.out.println("ГЛАВНОЕ МЕНЮ");
 
         byte van = -1;
-            while (van < 0 || van > 4) {
+            while (van < 0 || van > 6) {
             System.out.println("________________________________");
-            System.out.println("1.Приготовить кофе");
-            System.out.println("2.Показатели ингридиентов и ззагрязнения");
-            System.out.println("4.Посмотреть логи");
-            System.out.println("3.Выключить кофемашниу");
+            System.out.println("1.Приготовить кофе(готовый щаблон)");
+            System.out.println("2.создать свой вариант");
+            System.out.println("3.Приготовить свой вариант");
+            System.out.println("4.Показатели ингридиентов и загрязнения");
+            System.out.println("5.логи");
+            System.out.println("6 Выключить кофемашниу");
             System.out.println("________________________________");
 
             try {
                 String input = scan.nextLine();
                 van =Byte.parseByte(input);
-                if (van < 0 || van > 4){
-                    System.out.println("Ошибка ввода. Введите значение от 1 до последнего(4)");
+                if (van < 0 || van > 6){
+                    System.out.println("Ошибка ввода. Введите значение от 1 до 6");
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Введите корректное значение");
@@ -65,13 +67,26 @@ public class MainMenu {
                 }
 
             case 2:
-                REFRESH.Refresh();
+                Logi.log("Создание профиля");
+                menu4.nam4();
                 break;
             case 3:
+                Logi.log("Выбо профиля");
+               menu5.nam5();
+               break;
+            case 4:
+                Logi.log("Выбор просмотра ингридиентов");
+                REFRESH.Refresh();
+                break;
+            case 5:
+                Logi.log("Просмотр логов");
+                msg.msg();
+                break;
+            case 6:
                 Logi.log("Машина выключена");
                 System.out.println("Выключение кофемашины");
                 System.exit(0);
-        }
+            }
         }
     }
     }

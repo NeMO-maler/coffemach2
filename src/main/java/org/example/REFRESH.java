@@ -23,6 +23,11 @@ public class REFRESH {
                     String input = scanner.nextLine();
                     rf =Byte.parseByte(input);
 
+                    if (rf < 0 || rf > 6){
+                        System.out.println("_______________________________________________");
+                        System.out.println("Введите корректное значение");
+                        System.out.println("_______________________________________________");
+                    }
                 } catch (NumberFormatException e) {
                     System.out.println( "Введите корректное значение указаное выше ");
                 }
@@ -47,6 +52,7 @@ public class REFRESH {
                 MainMenu.polution = 0;
                 Refresh();
             case 0:
+                Logi.log("Просмотр запаса");
                 System.out.println("_________________________________________________________");
                 System.out.println("Текущее кол-во воды:" + MainMenu.water);
                 System.out.println("Текущее кол-во кофе:" + MainMenu.Coffe);
