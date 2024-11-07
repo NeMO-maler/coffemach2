@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class MainMenu {
     public static int Coffe = 1000;
     public static int maxCoffe = 1000;
-    public static int water = 4000;
-    public static int maxWater = 4000;
-    public static int milk = 3000;
-    public static int maxMilk = 3000;
+    public static int water = 2000;
+    public static int maxWater = 2000;
+    public static int milk = 1000;
+    public static int maxMilk = 1000;
     public static int polution = 0;
     public static int maxPolutiom = 20;
 

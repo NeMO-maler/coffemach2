@@ -54,7 +54,7 @@ class Prepare {
                 MainMenu.Coffe -= Capuchino.coffeeRashod * kr;
                 MainMenu.milk -= Capuchino.milkRashod * kr;
                 MainMenu.polution ++;
-                System.out.println("Приготовлено капучино");
+                System.out.println("Приготовлено капучино. кол-во:" + kr);
                 MainMenu.main();
             case 2:
                 System.out.println("--------------------------");
@@ -63,7 +63,7 @@ class Prepare {
                 MainMenu.Coffe -= expreso.coffeeRashod * kr;
                 MainMenu.milk -= expreso.milkRashod * kr;
                 MainMenu.polution ++;
-                System.out.println("Приготовлено эспрессо");
+                System.out.println("Приготовлено эспрессо кол-во:" + kr);
                 System.out.println("__________________________");
                 MainMenu.main();
 
