@@ -16,16 +16,16 @@ class Prepare {
         System.out.println("Выберите напиток:");
         System.out.println("1.Капучино");
         System.out.println("2.Еспрессо");
-        System.out.println("Вернуться в предыдущее меню");
+        System.out.println("3Вернуться в предыдущее меню");
         System.out.println("______________________");
 
         try {
             String input = scan.nextLine();
             coff =Byte.parseByte(input);
 
-            if ( coff < 1 || coff > 2){
+            if ( coff < 1 || coff > 3) {
                 System.out.println("___________________________");
-                System.out.println("Выберите значение 1 или 2");
+                System.out.println("Выберите значение 1 или 2 для приготовления, 3 для возвращения назад");
                 System.out.println("___________________________");
             }
         } catch (NumberFormatException e) {
@@ -65,6 +65,8 @@ class Prepare {
                 MainMenu.polution ++;
                 System.out.println("Приготовлено эспрессо кол-во:" + kr);
                 System.out.println("__________________________");
+                MainMenu.main();
+            case 3:
                 MainMenu.main();
 
 

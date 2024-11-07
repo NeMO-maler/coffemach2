@@ -14,6 +14,7 @@ public class MainMenu {
 
     public static void main() {
         Scanner scan = new Scanner(System.in);
+        System.out.println("Статус кофемашины: Выключена");
         System.out.println("ГЛАВНОЕ МЕНЮ");
 
         byte van = -1;
@@ -85,7 +86,7 @@ public class MainMenu {
             case 6:
                 Logi.log("Машина выключена");
                 System.out.println("Выключение кофемашины");
-                System.exit(0);
+                Main.main();  //System.exit(0);
             }
         }
     }
