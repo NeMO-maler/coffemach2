@@ -21,8 +21,8 @@ public class MainMenu {
             System.out.println("________________________________");
             System.out.println("1.Приготовить кофе");
             System.out.println("2.Показатели ингридиентов и ззагрязнения");
-            System.out.println("3.Выключить кофемашниу");
             System.out.println("4.Посмотреть логи");
+            System.out.println("3.Выключить кофемашниу");
             System.out.println("________________________________");
 
             try {

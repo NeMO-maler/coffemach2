@@ -53,7 +53,7 @@ class Prepare {
                 MainMenu.water -= Capuchino.waterRashod * kr;
                 MainMenu.Coffe -= Capuchino.coffeeRashod * kr;
                 MainMenu.milk -= Capuchino.milkRashod * kr;
-                MainMenu.polution ++;
+                MainMenu.polution += MainMenu.polution * kr;
                 System.out.println("Приготовлено капучино. кол-во:" + kr);
                 MainMenu.main();
             case 2:
