@@ -16,14 +16,14 @@ class Prepare {
         System.out.println("Выберите напиток:");
         System.out.println("1.Капучино");
         System.out.println("2.Еспрессо");
-        System.out.println("3Вернуться в предыдущее меню");
+        System.out.println("3.Вернуться в предыдущее меню");
         System.out.println("______________________");
 
         try {
             String input = scan.nextLine();
             coff =Byte.parseByte(input);
 
-            if ( coff < 1 || coff > 3) {
+            if (( coff < 1 || coff > 3) && input.length() == 1 && input.matches("[\\p{L}\\p{N}]")) {
                 System.out.println("___________________________");
                 System.out.println("Выберите значение 1 или 2 для приготовления, 3 для возвращения назад");
                 System.out.println("___________________________");
@@ -37,7 +37,7 @@ class Prepare {
                 try {
                     String input = scan.nextLine();
                     kr =Byte.parseByte(input);
-                    if (kr < 0 || kr > 5){
+                    if ((kr < 0 || kr > 5) && input.length() == 1 && input.matches("[\\p{L}\\p{N}]")){
                         System.out.println("____________________________");
                         System.out.println("Выберите значение от 1 до 5");
                         System.out.println("____________________________");

@@ -23,7 +23,7 @@ public class REFRESH {
                     String input = scanner.nextLine();
                     rf =Byte.parseByte(input);
 
-                    if (rf < 0 || rf > 6){
+                    if ((rf < 0 || rf > 6)  && input.length() == 1 && input.matches("[\\p{L}\\p{N}]")){
                         System.out.println("_______________________________________________");
                         System.out.println("Введите корректное значение");
                         System.out.println("_______________________________________________");
@@ -59,6 +59,7 @@ public class REFRESH {
                 System.out.println("Текущее кол-во молока:" + MainMenu.milk);
                 System.out.println("Состояние загрязнение:" + MainMenu.polution);
                 System.out.println("_________________________________________________________");
+                Refresh();
         }
 
 

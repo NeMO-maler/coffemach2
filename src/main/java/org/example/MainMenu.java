@@ -14,7 +14,7 @@ public class MainMenu {
 
     public static void main() {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Статус кофемашины: Выключена");
+        System.out.println("Статус кофемашины: Включена");
         System.out.println("ГЛАВНОЕ МЕНЮ");
 
         byte van = -1;
@@ -25,13 +25,13 @@ public class MainMenu {
             System.out.println("3.Приготовить свой вариант");
             System.out.println("4.Показатели ингридиентов и загрязнения");
             System.out.println("5.логи");
-            System.out.println("6 Выключить кофемашниу");
+            System.out.println("6. Выключить кофемашниу");
             System.out.println("________________________________");
 
             try {
                 String input = scan.nextLine();
                 van =Byte.parseByte(input);
-                if (van < 0 || van > 6){
+                if ((van < 0 || van > 6) && input.length() == 1 && input.matches("[\\p{L}\\p{N}]")) {
                     System.out.println("Ошибка ввода. Введите значение от 1 до 6");
                 }
             } catch (NumberFormatException e) {
